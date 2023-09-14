@@ -1,0 +1,48 @@
+---
+
+---
+
+<nav class="navbar">
+    <h1>Jus0ne</h1>
+        <ul class="navLinks">
+            <li class="navItem">Home</li>
+            <li class="navItem">Blog</li>
+        </ul>
+</nav>
+
+<style>
+    .navItem {
+        display: inline-block;
+        margin: 10px;
+    }
+    .navLinks {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-content: space-evenly;
+    }
+    .navbar {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .linkHighlight{
+        text-decoration: solid underline darkblue 2px;
+    }
+</style>
+
+<script>
+    const navitems = document.querySelectorAll(".navItem");
+    navitems.forEach((item) => {
+        if (window.location.pathname == "/" && item.textContent == "Home") {
+            item.classList.add("linkHighlight")
+        }
+        if (window.location.pathname == "/blog" && item.textContent == "Blog") {
+            item.classList.add("linkHighlight")
+        }
+    })
+</script>
