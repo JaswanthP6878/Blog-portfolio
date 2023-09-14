@@ -1,12 +1,11 @@
 ---
 
 ---
-
 <nav class="navbar">
     <h1>Jus0ne</h1>
         <ul class="navLinks">
-            <li class="navItem">Home</li>
-            <li class="navItem">Blog</li>
+            <li class="navItem"><a href="/">Home</a></li>
+            <li class="navItem"><a href="/blog">Blog</a></li>
         </ul>
 </nav>
 
@@ -14,6 +13,11 @@
     .navItem {
         display: inline-block;
         margin: 10px;
+        
+    }
+    .navItem a {
+        text-decoration: none;
+        color: black;
     }
     .navLinks {
         list-style: none;
@@ -31,7 +35,7 @@
     }
 
     .linkHighlight{
-        text-decoration: solid underline darkblue 2px;
+        text-decoration: solid underline  #2a7ae2 2px;
     }
 </style>
 
