@@ -1,16 +1,37 @@
 ---
 
 ---
-
 <footer>
-    <h1>This is the footer</h1>
-
+    <p class = "margin-decrease">
+        Made by P Jaswanth
+    </p>
+    <ul class ="social-list" class ="margin-decrease">
+        <li>Twitter</li>
+        <li>Github</li>
+    </ul>
 </footer>
-
-
 <style>
     footer {
-        position: fixed;
-        bottom: 0;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid black;
+        margin-top: 4em;
+        margin-bottom: 20px;
+    }
+    .social-list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-content: space-evenly;
+    }
+    .social-list li {
+        margin: 1em;
+    }
+    .margin-decrease {
+        margin: 0px;
     }
 </style>

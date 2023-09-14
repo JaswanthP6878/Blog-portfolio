@@ -1,39 +1,54 @@
 ---
-import Header from "../components/Header.astro"
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-const {title} = Astro.props
+const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-</head>
-<body>
-    <!-- 
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <!-- 
         add header
         add slot 
         add body
      -->
-     <Header />
-     <slot />
-     <Footer />
-</body>
+        <Header />
+        <main >
+            <slot />
+        </main>
+        <Footer />
+    </body>
 </html>
 
-
-<style is:global>
+<style>
     html {
         width: 60%;
         margin: auto;
-        font: 400 16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font:
+            400 16px/1.5 -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Helvetica,
+            Arial,
+            sans-serif,
+            "Apple Color Emoji",
+            "Segoe UI Emoji",
+            "Segoe UI Symbol";
     }
     body {
         position: relative;
+    }
+
+    main {
+        min-height: 70vh;
     }
 </style>

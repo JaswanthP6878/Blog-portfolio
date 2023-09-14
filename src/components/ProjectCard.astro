@@ -2,19 +2,20 @@
 const {heading, desc} = Astro.props
 ---
 <div class ="project">
-    <div>{heading}</div>
+    <div class = "heading">{heading}</div>
     <p>{desc}</p>
 </div>
 
 <style>
     .project {
-        width: calc(100%/2.2);
-        border: 1px solid black;
-        border-radius: 1em;
+        width: calc(100%/3.5);
         padding: 1em;
     }
     .project:hover {
-        background-color: lightblue;
+        background-color: lightgrey;
         cursor: grab;
+    }
+    .project:hover .heading {
+        text-decoration: underline solid black 1px;
     }
 </style>

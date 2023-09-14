@@ -1,17 +1,48 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Card from '../../components/Card.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Card from "../../components/Card.astro";
+
+import PostLink from "../../components/PostLink.astro";
+const posts = await Astro.glob("./*.md");
 ---
 
-<BaseLayout title = "main page">
-	<section class = "bio ">
-		Hi I am Jaswanth, a Final Year Undergrad student studying Computer Science with a specialization in Artifical Intelligence. Apart from course work i dabble in Distributed Systems, Language design, Networking and Web development.
-		I am currently working on Kubernetes for my internship.
-	</section>
+<BaseLayout title="blog page">
+	<div class = "headings">
+		<h3>Blog Posts</h3>
+		<h4><a href="/">Blog posts by tags</a></h4>
+	</div>
+	<ul class="post-list">
+		{
+			posts.map((post) => {
+				return (
+					<PostLink
+						title={post.frontmatter.title}
+						url={post.url}
+						date={post.frontmatter.date}
+					/>
+				);
+			})
+		}
+	</ul>
 </BaseLayout>
 
 <style>
+	.post-list {
+		margin-left: 0;
+		padding-left: 0;
+		list-style: none;
+	}
 	.bio {
 		margin-top: 20px;
+	}
+	.headings {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	h3,
+	h4 {
+		display: inline-block;
 	}
 </style>
