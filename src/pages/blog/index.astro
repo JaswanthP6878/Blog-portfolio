@@ -7,9 +7,9 @@ const posts = await Astro.glob("./*.md");
 ---
 
 <BaseLayout title="blog page">
-	<div class = "headings">
+	<div class="headings">
 		<h3>Blog Posts</h3>
-		<h4><a href="/">Blog posts by tags</a></h4>
+		<h4><a href="/blog/by-tags">Blog posts by tags</a></h4>
 	</div>
 	<ul class="post-list">
 		{

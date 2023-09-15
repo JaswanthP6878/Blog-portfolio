@@ -1,11 +1,11 @@
 ---
-layout: "../../layouts/BaseLayout.astro"
+layout: "../../layouts/BlogLayout.astro"
 title: My first blog and why i am starting this...
 date: 14-09-2023
+tags: ["personal", "backend", "go"]
 ---
 ### hello this is my first blog post
 I am creating this blog so that i can write about stuff i want and as well as keep learning new stuff
-
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis condimentum nisi, nec condimentum magna aliquam eu. Pellentesque placerat nec augue placerat faucibus. Praesent aliquam nisl quis quam sagittis sollicitudin. Etiam tincidunt cursus tristique. Nunc vitae hendrerit dui, non egestas lorem. Duis vehicula tincidunt congue. Aenean sed magna ornare sapien pretium auctor. Nullam magna odio, laoreet vitae dui nec, bibendum gravida lorem. Sed commodo euismod luctus. Praesent mollis turpis sodales, auctor felis a, maximus magna. Praesent quis tincidunt tellus. Praesent egestas a risus et elementum. Sed non ipsum eu justo porta luctus. Vestibulum pellentesque libero nec metus volutpat, nec hendrerit dui lobortis. Maecenas finibus, ligula in vehicula tempus, elit arcu dictum augue, sit amet varius purus quam id mi. Suspendisse non justo metus.
 

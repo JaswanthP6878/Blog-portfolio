@@ -1,0 +1,17 @@
+---
+const posts = await Astro.glob("./*.md")
+function getAllTags(posts) {
+    const data = new Set();
+    posts.forEach(post => {
+        let tags = post.frontmatter.tags
+        tags.forEach(tag => {
+            data.add(tag)
+        });
+    });
+    return [...data]
+}
+const tags = getAllTags(posts)
+console.log(tags)
+---
+<!-- need to write the actual logic for the page -->
+<div>by tags</div>
