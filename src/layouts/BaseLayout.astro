@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { ViewTransitions, slide } from 'astro:transitions';
+import { ViewTransitions, slide } from "astro:transitions";
 const { title } = Astro.props;
 ---
 
@@ -23,28 +23,19 @@ const { title } = Astro.props;
         add body
      -->
         <Header />
-        <main transition:animate={slide({ duration: '0.5s' })}>
+        <main transition:animate={slide({ duration: "0.5s" })}>
             <slot />
         </main>
         <Footer />
     </body>
 </html>
 
+
 <style>
     html {
         width: 60%;
         margin: auto;
-        font:
-            400 16px/1.5 -apple-system,
-            BlinkMacSystemFont,
-            "Segoe UI",
-            Roboto,
-            Helvetica,
-            Arial,
-            sans-serif,
-            "Apple Color Emoji",
-            "Segoe UI Emoji",
-            "Segoe UI Symbol";
+        font: 400 16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
     }
     body {
         position: relative;
@@ -52,5 +43,30 @@ const { title } = Astro.props;
 
     main {
         min-height: 70vh;
+    }
+
+    @media screen and (max-width: 450px) {
+        html {
+            width: 100%;
+            margin: auto;
+            font:
+                400 16px/1.9 -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif,
+                "Apple Color Emoji",
+                "Segoe UI Emoji",
+                "Segoe UI Symbol";
+        }
+        body {
+            position: relative;
+        }
+
+        main {
+            min-height: 70vh;
+        }
     }
 </style>

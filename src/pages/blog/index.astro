@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Card from "../../components/Card.astro";
 
 import PostLink from "../../components/PostLink.astro";
 const posts = await Astro.glob("./*.md");
@@ -36,6 +35,7 @@ const posts = await Astro.glob("./*.md");
 		margin-top: 20px;
 	}
 	.headings {
+		margin-top: 1em;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
