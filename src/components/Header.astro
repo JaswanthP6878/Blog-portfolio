@@ -1,18 +1,19 @@
 ---
 
 ---
+
 <nav class="navbar">
-    <h1>Jus0ne</h1>
-        <ul class="navLinks">
-            <li class="navItem"><a href="/">Home</a></li>
-            <li class="navItem"><a href="/blog">Blog</a></li>
-        </ul>
+    <h1 class="brand"><a href="/">Jus0ne</a></h1>
+    <ul class="navLinks">
+        <li class="navItem"><a href="/">Home</a></li>
+        <li class="navItem"><a href="/blog">Blog</a></li>
+    </ul>
 </nav>
 
 <style>
     .navItem {
         display: inline-block;
-        margin: 10px;   
+        margin: 10px;
     }
     .navItem a {
         text-decoration: none;
@@ -33,19 +34,35 @@
         justify-content: space-between;
     }
 
-    .linkHighlight{
-        text-decoration: solid underline  #2a7ae2 2px;
+    .linkHighlight {
+        text-decoration: solid underline #2a7ae2 2px;
+    }
+
+    .brand a {
+        text-decoration: none;
+        color: #000;
     }
 </style>
-
 <script>
-    const navitems = document.querySelectorAll(".navItem");
-    navitems.forEach((item) => {
-        if (window.location.pathname == "/" && item.textContent == "Home") {
-            item.classList.add("linkHighlight")
+    function setnavLinkStyle() {
+        const navitems = document.querySelectorAll(".navItem");
+        navitems.forEach((item) => {
+            if (window.location.pathname == "/" && item.textContent == "Home") {
+                item.classList.add("linkHighlight");
+            }
+            if (
+                window.location.pathname.includes("blog") &&
+                item.textContent == "Blog"
+            ) {
+                item.classList.add("linkHighlight");
+            }
+        });
+    }
+    document.addEventListener(
+        "astro:page-load",
+        () => {
+            // This only runs once.
+            setnavLinkStyle();
         }
-        if (window.location.pathname == "/blog" && item.textContent == "Blog") {
-            item.classList.add("linkHighlight")
-        }
-    })
+    );
 </script>

@@ -1,7 +1,8 @@
 ---
+layout: "../../layouts/BlogLayout.astro"
 title: "second post of python"
 date: 15-09-2023
-tags: ["personal", "python"]
+tags: ["python"]
 ---
 
 ## (I) am learning to write linux (Drive)rs

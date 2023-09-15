@@ -1,4 +1,7 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostLink from "../../components/PostLink.astro";
+BaseLayout
 const posts = await Astro.glob("./*.md")
 function getAllTags(posts) {
     const data = new Set();
@@ -11,7 +14,54 @@ function getAllTags(posts) {
     return [...data]
 }
 const tags = getAllTags(posts)
-console.log(tags)
 ---
 <!-- need to write the actual logic for the page -->
-<div>by tags</div>
+<BaseLayout title="blog page">
+	<div class="headings">
+		<h3>Blog Posts by tag</h3>
+		<h4><a href="/blog">Back to all posts</a></h4>
+	</div>
+    {tags.map((tag) => {
+        return (
+        <h4 class = "tag-name">{tag}</h4>
+        <ul class="post-list">
+		{
+			posts.filter((post) => post.frontmatter.tags?.includes(tag)).map((post) => {
+				return (
+					<PostLink
+						title={post.frontmatter.title}
+						url={post.url}
+						date={post.frontmatter.date}
+					/>
+				);
+			})
+		}
+	</ul>
+        )
+    })}
+	
+</BaseLayout>
+
+<style>
+	.post-list {
+		margin-left: 0;
+		padding-left: 0;
+		list-style: none;
+	}
+	.bio {
+		margin-top: 20px;
+	}
+	.headings {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	h3,
+	h4 {
+		display: inline-block;
+	}
+    .tag-name {
+        text-decoration-line: underline;
+    }
+</style>

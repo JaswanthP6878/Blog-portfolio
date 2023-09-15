@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogLayout.astro"
 title: My first blog and why i am starting this...
 date: 14-09-2023
-tags: ["personal", "backend", "go"]
+tags: ["personal"]
 ---
 ### hello this is my first blog post
 I am creating this blog so that i can write about stuff i want and as well as keep learning new stuff
