@@ -15,34 +15,36 @@ if (posts.length < 3) {
 		<p>
 			Hi I am Jaswanth, a Final Year Undergrad student studying Computer
 			Science with a specialization in Artifical Intelligence. Apart from
-			course work i dabble in Distributed Systems, Language design,
-			Networking and Web development.
+			course work i like in Distributed Systems, Language Design,
+			Networking and Web Development.
 		</p>
 		<p>
-			I am currently working on distrubuted olap
-			systems and a on-prem Kubernetes infra setup
+			I am currently working on a distibuted data store and also on-prem Kubernetes infra setup for my internship
 		</p>
 	</div>
 	<div class="project">
-		<h4>Some select projects I worked on</h4>
+		<h3>Projects</h3>
 		<div class="projectList">
 			<ProjectCard
 				heading="CodeCompete"
 				desc="1v1 code platform for friends to compete to solve cp problems."
+				link="https://github.com/JaswanthP6878/CodeCompete"
 			/>
 			<ProjectCard
 				heading="MoviesApi"
 				desc="a rate-limited web api for movie info"
+				link="https://github.com/JaswanthP6878/MoviesAPI"
 			/>
 			<ProjectCard
 				heading="Snippet Box"
-				desc="github-gist inspired site to post snippets of info"
+				desc="github-gist inspired site to post snippets of info",
+				link="https://github.com/JaswanthP6878/snippet-box"
 			/>
 		</div>
 	</div>
 
 	<div class="blogPosts">
-		<h4>A few of my blog posts</h4>
+		<h3>Blog</h3>
 		<ul class="postList">
 			{
 				posts.map((post) => {
@@ -57,6 +59,8 @@ if (posts.length < 3) {
 			}
 		</ul>
 	</div>
+
+	<h4 class = "allposts"> <a href="/blog">All posts &rightarrow;</a></h4>
 </BaseLayout>
 
 <style>
@@ -75,5 +79,20 @@ if (posts.length < 3) {
 		margin-left: 0;
 		padding-left: 0;
 		list-style: none;
+		min-height: 20vh;
+	}
+	
+	.allposts {
+		text-align: end;
+	}
+	.allposts a {
+		text-decoration: none;
+		color: black;
+
+	}
+	.allposts a:hover {
+		text-decoration-line: underline;
+		color: black;
+		
 	}
 </style>
