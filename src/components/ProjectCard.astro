@@ -2,21 +2,38 @@
 const {heading, desc} = Astro.props
 ---
 <div class="project">
-    <div class = "heading">{heading}</div>
+    <div class = "heading">{heading} <span class = "arrow">&rightarrow;</span></div>
+    
     <p>{desc}</p>
 </div>
 
 <style>
     .project {
         width: calc(100%/3.5);
+        background-color: #76bdf4;
         padding: 1em;
+    
+    }
+    .heading {
+        width: 100%;
+        display: flex;
+    }
+    .arrow {
+        
+        display: none;
+        margin-left: auto;
     }
     .project:hover {
         background-color: lightgrey;
         cursor: grab;
+        
     }
     .project:hover .heading {
         text-decoration: underline solid black 1px;
+    }
+
+    .project:hover .arrow {
+        display: inline;
     }
     .project p {
         margin-top: .3em;
