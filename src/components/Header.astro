@@ -3,7 +3,7 @@
 ---
 
 <nav class="navbar">
-    <h1 class="brand"><a href="/">Jus0ne</a></h1>
+    <h1 class="brand"><a href="/">Jus<span class = "brand-name">0</span>ne</a></h1>
     <ul class="navLinks">
         <li class="navItem"><a href="/">Home</a></li>
         <li class="navItem"><a href="/blog">Blog</a></li>
@@ -41,6 +41,14 @@
     .brand a {
         text-decoration: none;
         color: #000;
+    }
+
+    .brand-name {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: darkslategray;
+    }
+    .brand:hover .brand-name {
+        color: black;
     }
 </style>
 <script>
