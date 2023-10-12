@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import PostLink from "../components/PostLink.astro";
 
-let posts = await Astro.glob("./blog/*.md");
+let posts = await Astro.glob("./blog/*.md*");
 if (posts.length < 3) {
 	posts = posts;
 } else {

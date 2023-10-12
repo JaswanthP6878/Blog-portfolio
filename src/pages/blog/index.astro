@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import PostLink from "../../components/PostLink.astro";
-const posts = await Astro.glob("./*.md");
+const posts = await Astro.glob("./*.md*");
 ---
 
 <BaseLayout title="JP's blog">

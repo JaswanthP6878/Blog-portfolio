@@ -9,12 +9,20 @@ const { frontmatter } = Astro.props;
     <slot />
 </BaseLayout>
 
-<style>
+<style is:global>
     .blog-title {
         margin-bottom: 0;
     }
 
     .date-item {
         color: #828282;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .astro-code {
+        padding-left: 1em;
+        padding-bottom: 1em;
     }
 </style>

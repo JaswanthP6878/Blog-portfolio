@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PostLink from "../../components/PostLink.astro";
 BaseLayout
-const posts = await Astro.glob("./*.md")
+const posts = await Astro.glob("./*.md*")
 function getAllTags(posts) {
     const data = new Set();
     posts.forEach(post => {
