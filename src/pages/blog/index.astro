@@ -3,6 +3,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import PostLink from "../../components/PostLink.astro";
 const posts = await Astro.glob("./*.md*");
+
+const sortedPosts = posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 ---
 
 <BaseLayout title="JP's blog">
@@ -12,7 +14,7 @@ const posts = await Astro.glob("./*.md*");
 	</div>
 	<ul class="post-list">
 		{
-			posts.map((post) => {
+			sortedPosts.map((post) => {
 				return (
 					<PostLink
 						title={post.frontmatter.title}

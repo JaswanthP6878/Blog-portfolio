@@ -9,6 +9,9 @@ if (posts.length < 3) {
 } else {
 	posts = posts.slice(0, 2);
 }
+
+const sortedPosts = posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+
 ---
 <BaseLayout title="Home">
 	<div class="bio">
@@ -47,7 +50,7 @@ if (posts.length < 3) {
 		<h3>Blog</h3>
 		<ul class="postList">
 			{
-				posts.map((post) => {
+				sortedPosts.map((post) => {
 					return (
 						<PostLink
 							title={post.frontmatter.title}

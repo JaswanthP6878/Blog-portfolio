@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogLayout.astro"
 title: My  blog and why i am starting this...
-date: 16-09-2023
+date: "2023-09-16"
 tags: ["personal"]
 ---
 ### hello this is my first blog post
