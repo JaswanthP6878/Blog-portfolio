@@ -18,16 +18,21 @@ const sortedPosts = posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.p
 		<p>
 			Hi I am Jaswanth, a Final Year Undergrad student studying Computer
 			Science with a specialization in Artifical Intelligence. Apart from
-			course work i like in Distributed Systems, Language Design,
+			course work i am interested in Distributed Systems, Language Design,
 			Networking and Web Development.
 		</p>
 		<p>
-			I am currently working on a distibuted data store and also on-prem Kubernetes infra setup for my internship
+			I am currently working on a distibuted data store and an on-prem Kubernetes infra setup for my internship
 		</p>
 	</div>
 	<div class="project">
 		<h3>Projects</h3>
 		<div class="projectList">
+			<ProjectCard
+				heading="MapReduceMini"
+				desc="A toy implementation of map-reduce framework"
+				link="https://github.com/JaswanthP6878/MapReduceMini"
+			/>
 			<ProjectCard
 				heading="CodeCompete"
 				desc="1v1 code platform for friends to compete to solve cp problems."

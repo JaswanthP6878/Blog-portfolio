@@ -77,7 +77,7 @@ following this if we have two map workers(as well as two reduce workers) we woul
 With the IR data generated from the map phase, each reduce worker reads the IR data based on its worker id, for example  worker 1 would read mr-1-1, mr-2-1 and worker 2 would read mr-1-2, mr-2-2. After reading these files they would apply the reduce function and write the output to a `out-x` file where the x denotes the reduce worker id. The locations of these output files is passed back to the master.
 
 
-> 	Note what about the shuffling phase?
+> 	**Note**: what about the shuffling phase?
 	if you are familiar with the internals of map-reduce framework, you would be wondering where is the shuffling phase? I have integrated it with the map phase(remember the sort and the hash function).
 
 ## Testing the tool!
