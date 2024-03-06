@@ -29,8 +29,13 @@ const sortedPosts = posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.p
 		<h3>Projects</h3>
 		<div class="projectList">
 			<ProjectCard
+				heading="Chip-8 emulator"
+				desc="software emulator for running chip-8 spec games"
+				link="https://github.com/JaswanthP6878/chip8-emulator"
+			/>
+			<ProjectCard
 				heading="MapReduceMini"
-				desc="A toy implementation of map-reduce framework"
+				desc="An implementation map-reduce framework"
 				link="https://github.com/JaswanthP6878/MapReduceMini"
 			/>
 			<ProjectCard
@@ -80,7 +85,6 @@ const sortedPosts = posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.p
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: space-between;
 		row-gap: 10px;
 	}
 	.postList {
