@@ -4,14 +4,12 @@ import ProjectCard from "../components/ProjectCard.astro";
 import PostLink from "../components/PostLink.astro";
 
 let posts = await Astro.glob("./blog/*.md*");
-if (posts.length < 3) {
-	posts = posts;
+let sortedPosts = posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+if (sortedPosts.length < 3) {
+	sortedPosts = sortedPosts;
 } else {
-	posts = posts.slice(0, 3);
+	sortedPosts = sortedPosts.slice(0, 3);
 }
-
-const sortedPosts = posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
-
 ---
 <BaseLayout title="Home">
 	<div class="bio">
